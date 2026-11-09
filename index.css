@@ -1,0 +1,11 @@
+.svg-parent svg {
+    width: inherit;
+    height: inherit;
+}
+.svg-color-fix svg path {
+    fill: black !important;
+}
+.w-color-swatch.w-color-github > div:nth-child(1),
+.w-color-swatch.w-color-github > div:nth-child(2) {
+  display: none;
+}

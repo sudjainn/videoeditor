@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Edits</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#e6f2ff',
+                100: '#b3d9ff',
+                200: '#80bfff',
+                300: '#4da6ff',
+                400: '#1a8cff',
+                500: '#4f46e5', // #4f46e5
+                600: '#4338ca',
+                700: '#004999',
+                800: '#003166',
+                900: '#001833',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;700&family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Playfair+Display:wght@400;700&family=Merriweather:wght@400;700&family=IBM+Plex+Serif:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      // Global Error Handler for debugging "Uncaught" errors
+      window.onerror = function(message, source, lineno, colno, error) {
+        console.error("[Global Error Caught]:", message, "Source:", source, "Line:", lineno, "Error:", error);
+        return false; // Let default handler run as well
+      };
+
+      // Polyfills for browser environment to prevent "Uncaught ReferenceError"
+      window.global = window;
+      window.process = window.process || { env: { NODE_ENV: 'development' } };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gifshot/0.3.2/gifshot.min.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        /* Default base styles handled by Tailwind dark mode classes */
+        overflow: hidden;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #a1a1aa; /* gray-400 */
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #18181b;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #3f3f46;
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #52525b;
+      }
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .scrollbar-hide {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@0.263.1?deps=react@18.2.0",
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

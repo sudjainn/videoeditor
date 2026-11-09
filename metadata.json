@@ -1,0 +1,7 @@
+{
+  "name": "Copy of ReactVideoEdit",
+  "description": "A browser-based video editing application featuring multi-track timeline, layer composition, and real-time preview.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
